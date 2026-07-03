@@ -2,7 +2,9 @@
 
 This implementation is inspired by the work of [Guo et al (2025)](https://link.springer.com/article/10.1186/s13321-025-01039-8). In this paper, the authors demonstrate that UMAP-based splitting creates significantly more challenging and realistic benchmarks for model evaluation than traditional methods (such as random, scaffold-based, or Butina splits). Consequently, UMAP splits are highly recommended for evaluating molecular property prediction and virtual screening tasks.
 
-This code provides an enhanced and end-to-end, ready-to-use UMAP-based splitting that incorporates hyperparameter optimization for `n_clusters`, `n_neighbors`, `min_dist` using [Optuna](https://optuna.org/), followed by the assignment of samples to k-fold cross-validation splits while enforcing predefined maximum Tanimoto similarity constraints between folds.
+This code provides an enhanced, end-to-end and ready-to-use UMAP-based splitting that incorporates hyperparameter optimization for `n_clusters`, `n_neighbors`, `min_dist` using [Optuna](https://optuna.org/), followed by the assignment of samples to k-fold cross-validation splits while enforcing predefined maximum Tanimoto similarity constraints between folds.
+
+This optimized UMAP-based k-fold cross-validation sampling was implemented in this [preprint](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15000891/v1). 
 
 ## Workflow
 ![](Figure.png)
@@ -22,7 +24,7 @@ conda activate CBS
 The example of dataset in `.smi` format can be found at `example.smi`. Each row corresponds to a SMILES string with its ID. Inputs can also be prepared in `.csv` or `.txt` formats.
 
 ```
-python script.py \
+python umap_cluster.py \
     --input example.smi \
     --output results/ \
     --folds 5 \
@@ -40,3 +42,32 @@ where:
 - `--threshold`: Maximum Tanimoto similarity (`T_c`) across folds.
 - `--seed`: Random seed for reproducibility.
 
+## References
+
+```bibtex
+@article{guo2024scaffold,
+  title={Scaffold Splits Overestimate Virtual Screening Performance},
+  author={Guo, Qianrong and Hernandez-Hernandez, Saiveth and Ballester, Pedro J},
+  journal={arXiv preprint arXiv:2406.00873},
+  year={2024}
+}
+
+@article{guo2024umap,
+  title={UMAP-clustering split for rigorous evaluation of AI models for virtual screening on cancer cell lines},
+  author={Guo, Qianrong and Hernandez-Hernandez, Saiveth and Ballester, Pedro J},
+  journal={Journal of Cheminformatics},
+  year={2024}
+}
+
+@conference{guo2024scaffoldsplits,
+    author={Guo, Qianrong and Hernandez-Hernandez, Saiveth and Ballester, Pedro J.},
+    editor={Wand, Michael and Malinovsk{\'a}, Krist{\'i}na and Schmidhuber, J{\"u}rgen and Tetko, Igor V.},
+    title={Scaffold Splits Overestimate Virtual Screening Performance},
+    booktitle={Artificial Neural Networks and Machine Learning -- ICANN 2024},
+    year={2024},
+    publisher={Springer Nature Switzerland},
+    address={Cham},
+    pages={58--72},
+    isbn={978-3-031-72359-9}
+}
+```
