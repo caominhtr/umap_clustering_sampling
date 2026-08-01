@@ -4,7 +4,7 @@ This implementation is inspired by the work of [Guo et al (2025)](https://link.s
 
 This code provides an enhanced, end-to-end and ready-to-use UMAP-based splitting that incorporates hyperparameter optimization for `n_clusters`, `n_neighbors`, `min_dist` using [Optuna](https://optuna.org/), followed by the assignment of samples to k-fold cross-validation splits while enforcing predefined maximum Tanimoto similarity constraints between folds.
 
-This optimized UMAP-based k-fold cross-validation sampling was implemented in our [paper](https://link.springer.com/article/10.1186/s13321-026-01262-x) published in Journal of Cheminformatics (2026).
+This optimized UMAP-based k-fold cross-validation sampling was implemented in our [paper](https://link.springer.com/article/10.1186/s13321-026-01262-x) published in Journal of Cheminformatics (2026). The full repository containing data, source code for this paper can be found in [this](https://github.com/caominhtr/CBS).
 
 ## Workflow
 ![](Figure.png)
