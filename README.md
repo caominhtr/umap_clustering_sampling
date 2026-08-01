@@ -33,7 +33,7 @@ python umap_cluster.py \
     --output results/ \
     --folds 5 \
     --trials 100 \
-    --threshold 0.68 \
+    --threshold 0.7 \
     --seed 42
 ```
 
@@ -43,7 +43,7 @@ where:
 - `--output`: Directory where output files will be saved.
 - `--folds`: Number of cross-validation folds.
 - `--trials`: Number of Optuna optimization trials.
-- `--threshold`: Maximum Tanimoto similarity (`T_c`) across folds.
+- `--threshold`: Maximum Tanimoto similarity across folds.
 - `--seed`: Random seed for reproducibility.
 
 ## References
