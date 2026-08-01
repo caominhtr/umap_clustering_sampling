@@ -7,6 +7,7 @@ This code provides an enhanced, end-to-end and ready-to-use UMAP-based splitting
 This optimized UMAP-based k-fold cross-validation sampling was implemented in our [paper](https://link.springer.com/article/10.1186/s13321-026-01262-x):
 > **Enhancing virtual screening of cystathionine β-synthase inhibitors: benchmarking target-specific machine-learning scoring functions against state-of-the-art AI docking and co-folding approaches**  
 > *Journal of Cheminformatics* (2026). DOI: [10.1186/s13321-026-01262-x](https://link.springer.com/article/10.1186/s13321-026-01262-x)
+
 The repository containing data, source code for this paper can be found in [here](https://github.com/caominhtr/CBS). 
 
 ## Workflow
