@@ -11,7 +11,7 @@ This optimized UMAP-based k-fold cross-validation sampling was implemented in ou
 The repository containing data, source code for this paper can be found in [here](https://github.com/caominhtr/CBS). 
 
 ## Workflow
-![](Figure_umap.png)
+![](Figure_umap_clustering.png)
 
 ## Installation
 
